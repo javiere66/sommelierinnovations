@@ -1,0 +1,731 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"Noto Sans Symbols";}
+@font-face
+	{font-family:Inter;
+	panose-1:2 0 5 3 0 0 0 2 0 4;}
+@font-face
+	{font-family:Oswald;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Playfair Display";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:8.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:12.0pt;
+	font-family:Inter;}
+h1
+	{mso-style-link:"Heading 1 Char";
+	margin:0in;
+	page-break-after:avoid;
+	font-size:20.0pt;
+	font-family:Oswald;
+	color:#2C5FA8;
+	text-transform:uppercase;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{mso-style-link:"Footer Char";
+	margin:0in;
+	font-size:12.0pt;
+	font-family:Inter;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	text-align:center;
+	font-size:28.0pt;
+	font-family:Oswald;
+	color:#013369;
+	text-transform:uppercase;
+	letter-spacing:-.5pt;
+	font-weight:bold;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	text-align:center;
+	font-size:28.0pt;
+	font-family:Oswald;
+	color:#013369;
+	text-transform:uppercase;
+	letter-spacing:-.5pt;
+	font-weight:bold;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	text-align:center;
+	font-size:28.0pt;
+	font-family:Oswald;
+	color:#013369;
+	text-transform:uppercase;
+	letter-spacing:-.5pt;
+	font-weight:bold;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin:0in;
+	text-align:center;
+	font-size:28.0pt;
+	font-family:Oswald;
+	color:#013369;
+	text-transform:uppercase;
+	letter-spacing:-.5pt;
+	font-weight:bold;}
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-link:"No Spacing Char";
+	margin:0in;
+	font-size:12.0pt;
+	font-family:Inter;}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-link:"Heading 1";
+	font-family:Oswald;
+	color:#2C5FA8;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:Oswald;
+	color:#013369;
+	text-transform:uppercase;
+	letter-spacing:-.5pt;
+	font-weight:bold;}
+span.FooterChar
+	{mso-style-name:"Footer Char";
+	mso-style-link:Footer;}
+p.DRINK, li.DRINK, div.DRINK
+	{mso-style-name:DRINK;
+	mso-style-link:"DRINK Char";
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	font-size:14.0pt;
+	font-family:Inter;
+	color:#013369;
+	text-transform:uppercase;
+	font-weight:bold;}
+span.NoSpacingChar
+	{mso-style-name:"No Spacing Char";
+	mso-style-link:"No Spacing";}
+span.DRINKChar
+	{mso-style-name:"DRINK Char";
+	mso-style-link:DRINK;
+	color:#013369;
+	text-transform:uppercase;
+	font-weight:bold;}
+p.Opcion, li.Opcion, div.Opcion
+	{mso-style-name:Opcion;
+	mso-style-link:"Opcion Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:11.0pt;
+	font-family:Inter;
+	color:#FF0080;
+	font-style:italic;}
+span.OpcionChar
+	{mso-style-name:"Opcion Char";
+	mso-style-link:Opcion;
+	color:#FF0080;
+	font-style:italic;}
+p.Descripcion, li.Descripcion, div.Descripcion
+	{mso-style-name:Descripcion;
+	mso-style-link:"Descripcion Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:Inter;
+	color:black;}
+span.DescripcionChar
+	{mso-style-name:"Descripcion Char";
+	mso-style-link:Descripcion;
+	color:black;}
+.MsoChpDefault
+	{font-size:12.0pt;
+	font-family:Inter;}
+.MsoPapDefault
+	{margin-bottom:8.0pt;
+	line-height:115%;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:.5in .5in .5in .5in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US style='word-wrap:break-word'>
+
+<div class=WordSection1>
+
+<p class=MsoTitle><span lang=ES-MX>PALAPA BAR </span><span lang=ES-MX
+style='color:#2C5FA8'>- MENÚ DE COCTELERÍA</span></p>
+
+<h1 style='margin-top:8.0pt'><span lang=ES-MX>01 / LOS CLÁSICOS DE LA PALAPA</span></h1>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=360 valign=top style='width:269.75pt;border-top:solid #FF0080 3.0pt;
+  border-left:solid #FF0080 3.0pt;border-bottom:none;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK><span lang=ES-MX>Margarita</span></p>
+  <p class=Descripcion><span lang=ES-MX>Tequila, triple sec, jarabe, limón, sal</span></p>
+  <p class=Opcion><span lang=ES-MX style='font-family:Wingdings'>à</span><span
+  lang=ES-MX> Pídela SKINNY (sin jarabe o con Splenda)</span></p>
+  <p class=Opcion><span lang=ES-MX style='font-family:Wingdings'>à</span><span
+  lang=ES-MX> Pídela MEZCALINA (con Mezcal)</span></p>
+  </td>
+  <td width=360 valign=top style='width:269.75pt;border-top:solid #FF0080 3.0pt;
+  border-left:none;border-bottom:none;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK><span lang=PT-BR>Clamato </span></p>
+  <p class=Descripcion><span lang=ES-MX>Vodka, Clamato, limón, Maggi, Valentina</span></p>
+  <p class=Opcion><span lang=ES-MX style='font-family:Wingdings'>à</span><span
+  lang=ES-MX> Pídelo VAMPIRO (con Tequila)</span></p>
+  <p class=Opcion><span lang=ES-MX style='font-family:Wingdings'>à</span><span
+  lang=ES-MX> Pídelo BLOODY CÉSAR (poco picante)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=360 valign=top style='width:269.75pt;border:none;border-left:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK><span lang=ES-MX>Paloma</span></p>
+  <p class=Descripcion><span lang=ES-MX>Tequila, jugo de toronja, limón, sal,
+  soda</span></p>
+  <p class=Opcion><span lang=ES-MX style='font-family:Wingdings'>à</span><span
+  lang=ES-MX> Pídela SALTY DOG (con Vodka)</span></p>
+  </td>
+  <td width=360 valign=top style='width:269.75pt;border:none;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK><span lang=ES-MX>Pepillín</span></p>
+  <p class=Descripcion><span lang=ES-MX>Ginebra, pepino, jugo de limón, jarabe,
+  Tajín </span></p>
+  <p class=Opcion><span lang=ES-MX style='font-family:Wingdings'>à</span><span
+  lang=ES-MX> Pídelo con Vodka o Tequila</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=360 valign=top style='width:269.75pt;border:none;border-left:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK><span lang=ES-MX>Piña Colada</span></p>
+  <p class=Descripcion><span lang=ES-MX>Ron blanco, jugo de piña, crema de coco</span></p>
+  <p class=Opcion><span lang=ES-MX style='font-family:Wingdings'>à</span><span
+  lang=ES-MX> Pídela con Vodka</span></p>
+  </td>
+  <td width=360 valign=top style='width:269.75pt;border:none;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK><span lang=ES-MX>Bull</span></p>
+  <p class=Descripcion><span lang=ES-MX>Ron blanco, cerveza clara, limón,
+  jarabe</span></p>
+  <p class=Opcion><span lang=ES-MX style='font-family:Wingdings'>à</span><span
+  lang=ES-MX> Pídelo con Vodka</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=360 valign=top style='width:269.75pt;border:none;border-left:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK><span lang=ES-MX>Mojito </span></p>
+  <p class=Descripcion style='margin-bottom:6.0pt'><span lang=ES-MX>Ron blanco,
+  limón, menta, azúcar, soda</span></p>
+  <p class=Opcion><span lang=ES-MX style='font-family:Wingdings'>à</span><span
+  lang=ES-MX> Pídelo SKINNY (con Splenda)</span></p>
+  </td>
+  <td width=360 valign=top style='width:269.75pt;border:none;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK><span lang=ES-MX>Tom Collins</span></p>
+  <p class=Descripcion><span lang=ES-MX>Ginebra, jugo de limón, jarabe, soda</span></p>
+  <p class=Opcion><span lang=ES-MX style='font-family:Wingdings'>à</span><span
+  lang=ES-MX> Pídelo GRAPEFRUIT COLLINS (con toronja)</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=360 valign=top style='width:269.75pt;border-top:none;border-left:
+  solid #FF0080 3.0pt;border-bottom:solid #FF0080 3.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK><span lang=ES-MX>Aperol Spritz</span></p>
+  <p class=Descripcion><span lang=ES-MX>Aperol, prosecco, soda</span></p>
+  <p class=Opcion><span lang=ES-MX style='font-family:Wingdings'>à</span><span
+  lang=ES-MX> Pídelo APEROL BETTY (con jugo de naranja y toronja)</span></p>
+  </td>
+  <td width=360 valign=top style='width:269.75pt;border-top:none;border-left:
+  none;border-bottom:solid #FF0080 3.0pt;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK><span lang=ES-MX>Long Island Iced Tea</span></p>
+  <p class=Descripcion><span lang=ES-MX>Vodka, ginebra, ron blanco, tequila,
+  triple sec, jugo de limón, jarabe, Coca-Cola</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNoSpacing><span lang=ES-MX>&nbsp;</span></p>
+
+<h1><span lang=ES-MX>02 / COMBINA A TU GUSTO – MIX &amp; MATCH</span></h1>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=719
+ style='width:539.5pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=248 valign=top style='width:185.9pt;border-top:#FF0080 3.0pt;
+  border-left:#FF0080 3.0pt;border-bottom:#2C5FA8 1.0pt;border-right:#2C5FA8 1.0pt;
+  border-style:solid;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+  margin-left:0in'><span lang=ES-MX style='color:#FF0080'>1. Elige tu bebida</span></p>
+  </td>
+  <td width=248 valign=top style='width:185.9pt;border-top:solid #FF0080 3.0pt;
+  border-left:none;border-bottom:solid #2C5FA8 1.0pt;border-right:solid #2C5FA8 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+  margin-left:0in'><span lang=ES-MX style='color:#FF0080'>2. Elige tu mezclador</span></p>
+  </td>
+  <td width=224 valign=top style='width:167.7pt;border-top:solid #FF0080 3.0pt;
+  border-left:none;border-bottom:solid #2C5FA8 1.0pt;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+  margin-left:0in'><span lang=ES-MX style='color:#FF0080'>3. PersonalÍzaLO</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=248 valign=top style='width:185.9pt;border-top:none;border-left:
+  solid #FF0080 3.0pt;border-bottom:solid #FF0080 3.0pt;border-right:solid #2C5FA8 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Ron Blanco</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Tequila</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Mezcal</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Vodka</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Ginebra</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Whisky Escocés</span></p>
+  </td>
+  <td width=248 valign=top style='width:185.9pt;border-top:none;border-left:
+  none;border-bottom:solid #FF0080 3.0pt;border-right:solid #2C5FA8 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Coca-Cola</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Coca Light</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Agua Quina</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Soda (agua mineral)</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Yoli</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Cerveza</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Prosecco</span></p>
+  </td>
+  <td width=224 valign=top style='width:167.7pt;border-top:none;border-left:
+  none;border-bottom:solid #FF0080 3.0pt;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Limón</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Sal</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Tajín</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Salseo</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:11.3pt;margin-bottom:.0001pt;text-indent:-11.3pt'><span
+  lang=ES-MX style='font-size:12.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX style='font-size:12.0pt'>Banderilla de
+  tamarindo</span></p>
+  </td>
+ </tr>
+</table>
+
+<span style='font-size:12.0pt;line-height:115%;font-family:Inter'><br
+clear=all style='page-break-before:always'>
+</span>
+
+<p class=MsoNormal><span lang=ES-MX>&nbsp;</span></p>
+
+<p class=MsoTitle><span lang=ES-MX>PALAPA BAR - </span><span lang=ES-MX
+style='color:#2C5FA8'>MENÚ DE COCTELERÍA</span></p>
+
+<h1 style='margin-top:8.0pt'><span lang=ES-MX>03 / PARA NIÑOS Y SIN ALCOHOL</span></h1>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=358 valign=top style='width:268.5pt;border-top:solid #FF0080 3.0pt;
+  border-left:solid #FF0080 3.0pt;border-bottom:none;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Descripcion style='margin-top:10.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in'><span class=DRINKChar><span lang=ES-MX style='font-size:
+  14.0pt'>Piñada</span></span></p>
+  <p class=Descripcion><span class=DescripcionChar><span lang=ES-MX>Jugo de
+  piña, crema de coco</span></span></p>
+  </td>
+  <td width=358 valign=top style='width:268.5pt;border-top:solid #FF0080 3.0pt;
+  border-left:none;border-bottom:none;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Descripcion style='margin-top:10.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in'><span class=DRINKChar><span lang=ES-MX style='font-size:
+  14.0pt'>Pantera</span></span><span class=DRINKChar><span lang=ES-MX
+  style='color:black;text-transform:none;font-weight:normal'> </span></span><span
+  class=DRINKChar><span lang=ES-MX style='font-size:14.0pt'>Rosa</span></span><span
+  class=DRINKChar><span lang=ES-MX style='color:black;text-transform:none;
+  font-weight:normal'> </span></span></p>
+  <p class=Descripcion><span lang=ES-MX>Jugo de piña, crema de coco, granadina</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=358 valign=top style='width:268.5pt;border:none;border-left:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Descripcion style='margin-top:10.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in'><span class=DRINKChar><span lang=ES-MX style='font-size:
+  14.0pt'>Canica</span></span><span lang=ES-MX>  </span></p>
+  <p class=Descripcion><span lang=ES-MX>Yoli, granadina </span></p>
+  </td>
+  <td width=358 valign=top style='width:268.5pt;border:none;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Descripcion style='margin-top:10.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in'><span class=DRINKChar><span lang=ES-MX style='font-size:
+  14.0pt'>Suero</span></span><span lang=ES-MX> </span></p>
+  <p class=Descripcion><span lang=ES-MX>Sal, jugo de limón, soda</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=358 valign=top style='width:268.5pt;border-top:none;border-left:
+  solid #FF0080 3.0pt;border-bottom:solid #FF0080 3.0pt;border-right:none;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Descripcion style='margin-top:10.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in'><span class=DRINKChar><span lang=ES-MX style='font-size:
+  14.0pt'>Conga</span></span><span lang=ES-MX>  </span></p>
+  <p class=Descripcion><span lang=ES-MX>Jugo de naranja con granadina</span></p>
+  </td>
+  <td width=358 valign=top style='width:268.5pt;border-top:none;border-left:
+  none;border-bottom:solid #FF0080 3.0pt;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK><span lang=ES-MX>Limonada </span></p>
+  <p class=Descripcion><span lang=ES-MX>Jugo de limón, jarabe y soda o agua
+  natural</span></p>
+  <p class=Opcion><span lang=ES-MX style='font-family:Wingdings'>à</span><span
+  lang=ES-MX> Pídela con Splenda</span></p>
+  </td>
+ </tr>
+</table>
+
+<h1 style='margin-top:8.0pt'><span lang=ES-MX>04 / cervezas, refrescos y jugos     </span></h1>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=719
+ style='width:539.5pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=248 valign=top style='width:185.9pt;border-top:#FF0080 3.0pt;
+  border-left:#FF0080 3.0pt;border-bottom:#2C5FA8 1.0pt;border-right:#2C5FA8 1.0pt;
+  border-style:solid;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+  margin-left:0in'><span lang=ES-MX style='color:#FF0080'>cervezaS en lata</span></p>
+  </td>
+  <td width=248 valign=top style='width:185.9pt;border-top:solid #FF0080 3.0pt;
+  border-left:none;border-bottom:solid #2C5FA8 1.0pt;border-right:solid #2C5FA8 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+  margin-left:0in'><span lang=ES-MX style='color:#FF0080'>refrescoS en lata</span></p>
+  </td>
+  <td width=224 valign=top style='width:167.7pt;border-top:solid #FF0080 3.0pt;
+  border-left:none;border-bottom:solid #2C5FA8 1.0pt;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK style='margin-top:6.0pt;margin-right:0in;margin-bottom:6.0pt;
+  margin-left:0in'><span lang=ES-MX style='color:#FF0080'>jugoS</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=248 valign=top style='width:185.9pt;border-top:none;border-left:
+  solid #FF0080 3.0pt;border-bottom:solid #FF0080 3.0pt;border-right:solid #2C5FA8 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Modelo</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Corona</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Corona Light</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Michelob Ultra</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Victoria</span></p>
+  </td>
+  <td width=248 valign=top style='width:185.9pt;border-top:none;border-left:
+  none;border-bottom:solid #FF0080 3.0pt;border-right:solid #2C5FA8 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Coca-Cola</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Coca Light </span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Yoli</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Agua Mineral</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Agua Quina</span></p>
+  </td>
+  <td width=224 valign=top style='width:167.7pt;border-top:none;border-left:
+  none;border-bottom:solid #FF0080 3.0pt;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt'>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Clamato</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Piña</span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=PT-BR style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=PT-BR>Naranja </span></p>
+  <p class=DRINK style='margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:20.3pt;margin-bottom:.0001pt;text-indent:-.25in'><span
+  lang=ES-MX style='font-family:Symbol;color:#FF0080;font-weight:normal'>·<span
+  style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span><span lang=ES-MX>Toronja</span></p>
+  </td>
+ </tr>
+</table>
+
+<h1 style='margin-top:8.0pt'><span lang=ES-MX>05 / botanas     </span></h1>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=718
+ style='width:538.5pt;border-collapse:collapse;border:none'>
+ <tr style='height:1.0pt'>
+  <td width=352 style='width:264.0pt;border-top:solid #FF0080 3.0pt;border-left:
+  solid #FF0080 3.0pt;border-bottom:none;border-right:solid #2C5FA8 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:1.0pt'>
+  <p class=Descripcion style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:24.8pt;text-indent:-22.5pt'><span class=DRINKChar><span
+  lang=ES-MX style='font-size:14.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><span class=DRINKChar><span lang=ES-MX style='font-size:
+  14.0pt'>Papas </span></span><span class=DRINKChar><span lang=ES-MX
+  style='font-size:14.0pt;font-weight:normal'>(50G)</span></span></p>
+  </td>
+  <td width=366 style='width:274.5pt;border-top:solid #FF0080 3.0pt;border-left:
+  none;border-bottom:none;border-right:solid #FF0080 3.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:1.0pt'>
+  <p class=Descripcion style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:24.8pt;text-indent:-22.5pt'><span class=DRINKChar><span
+  lang=ES-MX style='font-size:14.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><span class=DRINKChar><span lang=ES-MX style='font-size:
+  14.0pt'>Pepino </span></span><span class=DRINKChar><span lang=ES-MX
+  style='font-size:14.0pt;font-weight:normal'>(150 g)</span></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=352 style='width:264.0pt;border-top:none;border-left:solid #FF0080 3.0pt;
+  border-bottom:none;border-right:solid #2C5FA8 1.0pt;padding:0in 5.4pt 0in 5.4pt;
+  height:1.0pt'>
+  <p class=Descripcion style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:24.8pt;text-indent:-22.5pt'><span class=DRINKChar><span
+  lang=ES-MX style='font-size:14.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><span class=DRINKChar><span lang=ES-MX style='font-size:
+  14.0pt'>Takis </span></span><span class=DRINKChar><span lang=ES-MX
+  style='font-size:14.0pt;font-weight:normal'>(50G)</span></span></p>
+  </td>
+  <td width=366 style='width:274.5pt;border:none;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:1.0pt'>
+  <p class=Descripcion style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:24.8pt;text-indent:-22.5pt'><span class=DRINKChar><span
+  lang=ES-MX style='font-size:14.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><span class=DRINKChar><span lang=ES-MX style='font-size:
+  14.0pt'>Jícama </span></span><span class=DRINKChar><span lang=ES-MX
+  style='font-size:14.0pt;font-weight:normal'>(150 g)</span></span></p>
+  </td>
+ </tr>
+ <tr style='height:1.0pt'>
+  <td width=352 style='width:264.0pt;border-top:none;border-left:solid #FF0080 3.0pt;
+  border-bottom:solid #FF0080 3.0pt;border-right:solid #2C5FA8 1.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:1.0pt'>
+  <p class=Descripcion style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  4.0pt;margin-left:24.8pt;text-indent:-22.5pt'><span class=DRINKChar><span
+  lang=ES-MX style='font-size:14.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><span class=DRINKChar><span lang=ES-MX style='font-size:
+  14.0pt'>Cacahuates japoneses </span></span><span class=DRINKChar><span
+  lang=ES-MX style='font-size:14.0pt;font-weight:normal'>(50G)</span></span></p>
+  </td>
+  <td width=366 style='width:274.5pt;border-top:none;border-left:none;
+  border-bottom:solid #FF0080 3.0pt;border-right:solid #FF0080 3.0pt;
+  padding:0in 5.4pt 0in 5.4pt;height:1.0pt'>
+  <p class=Descripcion style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  4.0pt;margin-left:24.8pt;text-indent:-22.5pt'><span class=DRINKChar><span
+  lang=ES-MX style='font-size:14.0pt;font-family:Symbol;color:#FF0080;
+  font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </span></span></span><span class=DRINKChar><span lang=ES-MX style='font-size:
+  14.0pt'>Banderilla de tamarindo </span></span></p>
+  </td>
+ </tr>
+</table>
+
+<h1 style='margin-top:8.0pt'><span lang=ES-MX>06 / Precios</span></h1>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=274
+ style='width:205.5pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=208 valign=top style='width:156.0pt;border:solid #FF0080 3.0pt;
+  border-right:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Descripcion style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in'><span class=DRINKChar><span lang=ES-MX style='font-size:
+  11.0pt'>Cocteles y Destilados </span></span></p>
+  <p class=Descripcion style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in'><span class=DRINKChar><span lang=ES-MX style='font-size:
+  11.0pt'>Cocteles Sin Alcohol </span></span></p>
+  <p class=Descripcion style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in'><span class=DRINKChar><span lang=ES-MX style='font-size:
+  11.0pt'>Cervezas  </span></span></p>
+  <p class=Descripcion style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in'><span class=DRINKChar><span lang=ES-MX style='font-size:
+  11.0pt'>Refrescos </span></span></p>
+  <p class=Descripcion style='margin-top:4.0pt;margin-right:0in;margin-bottom:
+  0in;margin-left:0in'><span class=DRINKChar><span lang=ES-MX style='font-size:
+  11.0pt'>Botanas </span></span></p>
+  </td>
+  <td width=66 valign=top style='width:49.5pt;border:solid #FF0080 3.0pt;
+  border-left:none;padding:0in 5.4pt 0in 5.4pt'>
+  <p class=Descripcion align=center style='margin-top:4.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:0in;text-align:center'><span class=DRINKChar><span
+  lang=ES-MX style='font-size:11.0pt;color:#FF0080'>$70</span></span></p>
+  <p class=Descripcion align=center style='margin-top:4.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:0in;text-align:center'><span class=DRINKChar><span
+  lang=ES-MX style='font-size:11.0pt;color:#FF0080'>$50</span></span></p>
+  <p class=Descripcion align=center style='margin-top:4.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:0in;text-align:center'><span class=DRINKChar><span
+  lang=ES-MX style='font-size:11.0pt;color:#FF0080'>$35</span></span></p>
+  <p class=Descripcion align=center style='margin-top:4.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:0in;text-align:center'><span class=DRINKChar><span
+  lang=ES-MX style='font-size:11.0pt;color:#FF0080'>$25</span></span></p>
+  <p class=Descripcion align=center style='margin-top:4.0pt;margin-right:0in;
+  margin-bottom:0in;margin-left:0in;text-align:center'><span class=DRINKChar><span
+  lang=ES-MX style='font-size:11.0pt;color:#FF0080'>$35</span></span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-bottom:0in;line-height:normal'><span
+lang=ES-MX style='font-size:8.0pt'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
