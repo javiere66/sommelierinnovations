@@ -3,61 +3,64 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Sommelier Innovations — menús digitales de nuestros bares. Escanea, explora y disfruta.">
-<meta name="theme-color" content="#013369">
-<title>Sommelier Innovations · Menús</title>
+<meta name="description" content="Marina del Sol — bares y menús digitales. Escanea, explora y disfruta.">
+<meta name="theme-color" content="#ffffff">
+<title>Marina del Sol · Bares y Menús</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700;800&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #013369;
     --blue: #2C5FA8;
-    --pink: #FF0080;
-    --sand: #FDF8F0;
-    --ink: #1c2430;
-    --line: #e8e2d6;
+    --magenta: #FF0080;
+    --gold: #FFD700;
+    --ink: #0B1220;
+    --gray: #7A8292;
+    --line: #D7DEE8;
+    --bg: #F3F6FA;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: 'Inter', system-ui, sans-serif;
     color: var(--ink);
-    background: var(--sand);
+    background: var(--bg);
     min-height: 100vh;
     -webkit-text-size-adjust: 100%;
   }
-  header {
-    background-image: linear-gradient(160deg, #013369 0%, #14498c 60%, #2C5FA8 100%);
-    color: #fff;
+
+  header.brand {
+    background: #fff;
     text-align: center;
-    padding: 3rem 1.25rem 2.5rem;
+    padding: 2.4rem 1.25rem 2rem;
+    border-bottom: 3px solid var(--navy);
   }
-  header .mark { font-size: 2.25rem; line-height: 1; }
-  header h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: clamp(1.9rem, 8vw, 2.8rem);
+  .wordmark { font-family: 'Playfair Display', serif; color: var(--ink); line-height: .95; }
+  .wordmark .l1 { display: block; font-size: clamp(1rem, 4.6vw, 1.45rem); letter-spacing: .16em; font-weight: 600; }
+  .wordmark .l2 {
+    display: flex; align-items: center; justify-content: center;
+    font-size: clamp(2.8rem, 13vw, 4rem); font-weight: 700; letter-spacing: .05em; margin-top: .05em;
+  }
+  .wordmark .l2 svg { width: .86em; height: .86em; }
+  header.brand .sub {
+    font-family: 'Inter', sans-serif;
     text-transform: uppercase;
-    letter-spacing: .04em;
-    margin-top: .35rem;
+    letter-spacing: .24em;
+    font-size: .72rem;
+    font-weight: 800;
+    color: var(--magenta);
+    margin-top: 1rem;
   }
-  header p {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: .22em;
-    font-size: .78rem;
-    color: #ffd9ec;
-    margin-top: .5rem;
-  }
+
   main { max-width: 46rem; margin: 0 auto; padding: 2rem 1.25rem 3rem; }
   h2.section {
     font-family: 'Oswald', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     color: var(--blue);
-    font-size: 1.15rem;
-    letter-spacing: .03em;
-    border-bottom: 3px solid var(--pink);
-    padding-bottom: .4rem;
-    margin-bottom: 1.25rem;
+    font-size: 1.2rem;
+    letter-spacing: .02em;
+    margin-bottom: 1.1rem;
   }
   .bars { display: grid; grid-template-columns: 1fr; gap: 1rem; }
   @media (min-width: 40rem) { .bars { grid-template-columns: 1fr 1fr; } }
@@ -66,55 +69,59 @@
     align-items: center;
     gap: 1rem;
     background: #fff;
-    border: 1px solid var(--line);
-    border-left: 5px solid var(--pink);
-    border-radius: .7rem;
+    border: 2px solid var(--magenta);
+    border-radius: .75rem;
     padding: 1.15rem 1.25rem;
     text-decoration: none;
     color: inherit;
-    box-shadow: 0 1px 3px rgba(28,36,48,.06);
     transition: transform .12s ease, box-shadow .12s ease;
   }
   a.bar:hover, a.bar:active { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(1,51,105,.14); }
-  a.bar .emoji { font-size: 2rem; line-height: 1; }
+  a.bar .icon { width: 40px; height: 40px; flex: none; }
   a.bar .txt h3 {
     font-family: 'Oswald', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     color: var(--navy);
     font-size: 1.2rem;
     letter-spacing: .02em;
   }
-  a.bar .txt p { font-size: .88rem; color: #5b6472; margin-top: .15rem; }
-  a.bar .arrow { margin-left: auto; color: var(--pink); font-size: 1.4rem; font-weight: 700; }
-  footer { text-align: center; padding: 1rem 1.25rem 2.5rem; color: #5b6472; font-size: .8rem; }
-  footer .heart { color: var(--pink); }
+  a.bar .txt p { font-size: .88rem; color: var(--gray); margin-top: .15rem; }
+  a.bar .arrow { margin-left: auto; color: var(--magenta); font-size: 1.4rem; font-weight: 700; }
+
+  footer { text-align: center; padding: 1rem 1.25rem 2.5rem; color: var(--gray); font-size: .78rem; }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="mark" aria-hidden="true">🍸</div>
-  <h1>Sommelier Innovations</h1>
-  <p>Menús Digitales</p>
+<header class="brand">
+  <div class="wordmark">
+    <span class="l1">MARINA DEL</span>
+    <span class="l2">S<svg viewBox="0 0 100 100" aria-hidden="true"><path d="M 49.43,4.05 L 59.87,26.87 L 83.03,17.13 L 73.72,39.31 L 96.78,48.49 L 73.54,58.93 L 84.11,83.75 L 60.35,73.25 L 49.57,98.34 L 40.00,73.78 L 16.67,81.18 L 26.13,59.19 L 4.16,51.14 L 25.26,40.14 L 15.86,17.35 L 40.38,26.12 Z" fill="#FFD700" stroke="#0B1220" stroke-width="2.6" stroke-linejoin="round"/><ellipse cx="50" cy="50" rx="18" ry="20" fill="#FF0080" stroke="#0B1220" stroke-width="2.6"/></svg>L</span>
+  </div>
+  <p class="sub">Bares y Menús</p>
 </header>
 
 <main>
   <h2 class="section">Nuestros Bares</h2>
   <div class="bars">
     <a class="bar" href="bars/palapa-bar/">
-      <span class="emoji" aria-hidden="true">🌴</span>
+      <svg class="icon" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M 49.43,4.05 L 59.87,26.87 L 83.03,17.13 L 73.72,39.31 L 96.78,48.49 L 73.54,58.93 L 84.11,83.75 L 60.35,73.25 L 49.57,98.34 L 40.00,73.78 L 16.67,81.18 L 26.13,59.19 L 4.16,51.14 L 25.26,40.14 L 15.86,17.35 L 40.38,26.12 Z" fill="#FFD700" stroke="#0B1220" stroke-width="2.6" stroke-linejoin="round"/>
+        <ellipse cx="50" cy="50" rx="18" ry="20" fill="#FF0080" stroke="#0B1220" stroke-width="2.6"/>
+      </svg>
       <span class="txt">
         <h3>Palapa Bar</h3>
         <p>Coctelería, cervezas, sin alcohol y botanas</p>
       </span>
       <span class="arrow" aria-hidden="true">→</span>
     </a>
-    <!-- Para agregar otro bar, copia este bloque y cambia el enlace, el emoji y el texto. -->
+    <!-- Para agregar otro bar, copia este bloque y cambia el enlace y el texto. -->
   </div>
 </main>
 
 <footer>
-  <p>Hecho con <span class="heart">♥</span> por Sommelier Innovations</p>
+  <p>Marina del Sol · Menús Digitales</p>
 </footer>
 
 </body>

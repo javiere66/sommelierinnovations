@@ -4,20 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Palapa Bar – Menú de coctelería. Cócteles clásicos, mix & match, bebidas sin alcohol, cervezas, refrescos y botanas.">
-<meta name="theme-color" content="#013369">
+<meta name="theme-color" content="#ffffff">
 <title>Palapa Bar · Menú de Coctelería</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,400&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #013369;
     --blue: #2C5FA8;
-    --pink: #FF0080;
-    --sand: #FDF8F0;
-    --ink: #1c2430;
-    --card: #ffffff;
-    --line: #e8e2d6;
+    --magenta: #FF0080;
+    --gold: #FFD700;
+    --ink: #0B1220;
+    --gray: #7A8292;
+    --line: #D7DEE8;
+    --bg: #F3F6FA;
+    --box: #ffffff;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -26,228 +28,197 @@
     font-size: 16px;
     line-height: 1.5;
     color: var(--ink);
-    background: var(--sand);
+    background: var(--bg);
     -webkit-text-size-adjust: 100%;
   }
 
-  /* ---------- Header ---------- */
-  header {
-    background: var(--navy);
-    color: #fff;
+  /* ---------- Brand header (matches posted menu) ---------- */
+  header.brand {
+    background: #fff;
     text-align: center;
-    padding: 2rem 1rem 1.5rem;
-    background-image: linear-gradient(160deg, #013369 0%, #14498c 60%, #2C5FA8 100%);
+    padding: 1.6rem 1rem 1.3rem;
   }
-  header .palm { font-size: 2rem; line-height: 1; }
-  header h1 {
+  header.brand .sun { width: 48px; height: 48px; display: block; margin: 0 auto .55rem; }
+  header.brand hr {
+    border: 0;
+    height: 3px;
+    background: var(--navy);
+    max-width: min(40rem, 92%);
+    margin: 0 auto 1rem;
+  }
+  header.brand h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: clamp(1.8rem, 8vw, 2.6rem);
+    font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: .04em;
-    margin-top: .25rem;
+    font-size: clamp(1.45rem, 6.5vw, 2.5rem);
+    line-height: 1.05;
+    letter-spacing: .01em;
   }
-  header p.tagline {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: .25em;
-    font-size: .8rem;
-    color: #ffd9ec;
-    margin-top: .35rem;
-  }
+  header.brand h1 .a { color: var(--navy); }
+  header.brand h1 .b { color: var(--blue); }
 
   /* ---------- Sticky section nav ---------- */
   nav {
     position: sticky;
     top: 0;
     z-index: 10;
-    background: var(--navy);
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 1px 6px rgba(1, 51, 105, .06);
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    box-shadow: 0 2px 8px rgba(1, 51, 105, .25);
   }
   nav::-webkit-scrollbar { display: none; }
   nav ul {
     display: flex;
-    gap: .25rem;
+    gap: .4rem;
     list-style: none;
-    padding: .5rem .75rem;
+    padding: .55rem .75rem;
     width: max-content;
+    margin: 0 auto;
   }
   nav a {
     display: block;
     font-family: 'Oswald', sans-serif;
-    font-size: .85rem;
+    font-weight: 600;
+    font-size: .82rem;
     text-transform: uppercase;
-    letter-spacing: .05em;
-    color: #fff;
+    letter-spacing: .04em;
+    color: var(--navy);
     text-decoration: none;
-    padding: .35rem .8rem;
+    padding: .38rem .85rem;
     border-radius: 999px;
-    border: 1px solid rgba(255, 255, 255, .35);
+    border: 1px solid var(--line);
     white-space: nowrap;
   }
-  nav a:active, nav a:hover { background: var(--pink); border-color: var(--pink); }
+  nav a:hover, nav a:active { background: var(--magenta); color: #fff; border-color: var(--magenta); }
 
   /* ---------- Layout ---------- */
-  main { max-width: 42rem; margin: 0 auto; padding: 1rem 1rem 3rem; }
+  main { max-width: 44rem; margin: 0 auto; padding: 1.25rem 1rem 3rem; }
   @media (min-width: 48rem) { main { max-width: 60rem; } }
 
-  section { padding-top: .5rem; margin-bottom: 2rem; scroll-margin-top: 4rem; }
-  .section-head {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: .75rem;
-    border-bottom: 3px solid var(--pink);
-    padding: 1rem 0 .4rem;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-  }
-  .section-head h2 {
+  section { margin-bottom: 1.9rem; scroll-margin-top: 4.2rem; }
+  h2.sec {
     font-family: 'Oswald', sans-serif;
-    font-size: clamp(1.25rem, 5vw, 1.6rem);
+    font-weight: 700;
     text-transform: uppercase;
+    font-size: clamp(1.2rem, 5.5vw, 1.75rem);
+    letter-spacing: .01em;
     color: var(--blue);
-    letter-spacing: .02em;
+    margin-bottom: .7rem;
   }
-  .section-head h2 .num { color: var(--pink); }
-  .section-price {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    color: #fff;
-    background: var(--pink);
-    border-radius: 999px;
-    padding: .15rem .75rem;
-    font-size: .9rem;
-    white-space: nowrap;
+  h2.sec .num { color: var(--navy); }
+
+  .box {
+    border: 2.5px solid var(--magenta);
+    border-radius: 12px;
+    background: var(--box);
+    padding: 1.1rem 1.15rem;
   }
 
-  /* ---------- Drink cards ---------- */
-  .cards { display: grid; grid-template-columns: 1fr; gap: .75rem; }
-  @media (min-width: 40rem) { .cards { grid-template-columns: 1fr 1fr; } }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-left: 4px solid var(--pink);
-    border-radius: .6rem;
-    padding: .9rem 1rem;
-    box-shadow: 0 1px 3px rgba(28, 36, 48, .06);
-  }
-  .card h3 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 1.1rem;
+  /* ---------- Drink lists (01, 03) ---------- */
+  .drinks { display: grid; grid-template-columns: 1fr; gap: 1.05rem 1.75rem; }
+  @media (min-width: 40rem) { .drinks { grid-template-columns: 1fr 1fr; } }
+  .drink h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
     text-transform: uppercase;
     color: var(--navy);
-    letter-spacing: .02em;
-  }
-  .card p.desc { font-size: .95rem; color: #3d4654; margin-top: .15rem; }
-  .card ul.opts { list-style: none; margin-top: .5rem; }
-  .card ul.opts li {
-    font-size: .85rem;
-    font-style: italic;
-    color: var(--pink);
-    padding-left: 1.1rem;
-    position: relative;
-    margin-top: .2rem;
-  }
-  .card ul.opts li::before { content: "🍹"; font-style: normal; position: absolute; left: 0; font-size: .75rem; top: .12rem; }
-
-  /* ---------- Mix & match / simple list columns ---------- */
-  .columns { display: grid; grid-template-columns: 1fr; gap: .75rem; }
-  @media (min-width: 40rem) { .columns { grid-template-columns: repeat(3, 1fr); } }
-  .col {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-top: 4px solid var(--pink);
-    border-radius: .6rem;
-    padding: .9rem 1rem;
-    box-shadow: 0 1px 3px rgba(28, 36, 48, .06);
-  }
-  .col h3 {
-    font-family: 'Oswald', sans-serif;
     font-size: 1rem;
+    letter-spacing: .01em;
+  }
+  .drink .desc { font-size: .92rem; color: var(--ink); margin-top: .12rem; }
+  .drink .opts { list-style: none; margin-top: .35rem; }
+  .drink .opts li {
+    font-style: italic;
+    color: var(--magenta);
+    font-size: .86rem;
+    line-height: 1.35;
+    margin-top: .12rem;
+    padding-left: 1.15em;
+    text-indent: -1.15em;
+  }
+  .drink .opts li::before { content: "\2192\00a0"; font-style: normal; }
+
+  /* ---------- Column blocks (02, 04) ---------- */
+  .cols { display: grid; grid-template-columns: 1fr; }
+  @media (min-width: 40rem) { .cols { grid-template-columns: repeat(3, 1fr); } }
+  .col { padding: .1rem .2rem; }
+  @media (min-width: 40rem) { .col + .col { border-left: 1.5px solid var(--navy); padding-left: 1rem; } }
+  @media (max-width: 39.99rem) { .col + .col { border-top: 1px solid var(--line); margin-top: .7rem; padding-top: .7rem; } }
+  .col h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
     text-transform: uppercase;
-    color: var(--pink);
+    color: var(--magenta);
+    font-size: .9rem;
+    padding-bottom: .4rem;
     margin-bottom: .5rem;
+    border-bottom: 1.5px solid var(--navy);
   }
   .col ul { list-style: none; }
-  .col ul li {
-    font-weight: 600;
-    color: var(--navy);
-    padding: .3rem 0 .3rem 1.2rem;
-    position: relative;
-    border-bottom: 1px dashed var(--line);
-  }
-  .col ul li:last-child { border-bottom: none; }
-  .col ul li::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: .75rem;
-    width: .45rem;
-    height: .45rem;
-    border-radius: 50%;
-    background: var(--pink);
-  }
-  .col ul li small { display: block; font-weight: 400; font-size: .8rem; color: #5b6472; }
-
-  /* ---------- Snacks ---------- */
-  .snacks { display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
-  @media (min-width: 40rem) { .snacks { grid-template-columns: repeat(3, 1fr); } }
-  .snack {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: .6rem;
-    padding: .7rem .85rem;
-    font-family: 'Oswald', sans-serif;
+  .col li {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     color: var(--navy);
-    font-size: .95rem;
-    box-shadow: 0 1px 3px rgba(28, 36, 48, .06);
+    font-size: .88rem;
+    line-height: 1.3;
+    padding: .24rem 0 .24rem 1.15em;
+    text-indent: -1.15em;
   }
-  .snack small { display: block; font-family: 'Inter', sans-serif; text-transform: none; color: #5b6472; font-size: .78rem; font-weight: 400; }
+  .col li::before { content: "\2022\00a0\00a0"; color: var(--magenta); }
+  .col li small { font-weight: 400; text-transform: none; color: var(--gray); }
 
-  /* ---------- Prices ---------- */
-  .price-table {
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: .6rem;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(28, 36, 48, .06);
-  }
-  .price-row {
+  /* ---------- Botanas (05) ---------- */
+  .snacks { display: grid; grid-template-columns: 1fr; }
+  @media (min-width: 40rem) { .snacks { grid-template-columns: 1fr 1fr; column-gap: 1.5rem; } }
+
+  /* ---------- Precios (06) ---------- */
+  .prices-box { max-width: 24rem; }
+  .prices { list-style: none; }
+  .prices li {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: .7rem 1rem;
-    border-bottom: 1px dashed var(--line);
+    align-items: baseline;
     gap: 1rem;
+    padding: .42rem 0;
+    border-bottom: 1px solid var(--line);
   }
-  .price-row:last-child { border-bottom: none; }
-  .price-row span {
-    font-family: 'Oswald', sans-serif;
+  .prices li:last-child { border-bottom: 0; }
+  .prices .label {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
     text-transform: uppercase;
     color: var(--navy);
-    font-weight: 600;
+    font-size: .9rem;
   }
-  .price-row b { font-family: 'Oswald', sans-serif; color: var(--pink); font-size: 1.15rem; }
+  .prices .amt {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    color: var(--magenta);
+    font-size: 1rem;
+  }
 
   footer {
     text-align: center;
-    padding: 1.5rem 1rem 2.5rem;
-    color: #5b6472;
-    font-size: .8rem;
+    padding: 1.25rem 1rem 2.5rem;
+    color: var(--gray);
+    font-size: .78rem;
+    line-height: 1.6;
   }
-  footer .heart { color: var(--pink); }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="palm" aria-hidden="true">🌴</div>
-  <h1>Palapa Bar</h1>
-  <p class="tagline">Menú de Coctelería</p>
+<header class="brand">
+  <svg class="sun" viewBox="0 0 100 100" role="img" aria-label="Marina del Sol">
+    <path d="M 49.43,4.05 L 59.87,26.87 L 83.03,17.13 L 73.72,39.31 L 96.78,48.49 L 73.54,58.93 L 84.11,83.75 L 60.35,73.25 L 49.57,98.34 L 40.00,73.78 L 16.67,81.18 L 26.13,59.19 L 4.16,51.14 L 25.26,40.14 L 15.86,17.35 L 40.38,26.12 Z" fill="#FFD700" stroke="#0B1220" stroke-width="2.6" stroke-linejoin="round"/>
+    <ellipse cx="50" cy="50" rx="18" ry="20" fill="#FF0080" stroke="#0B1220" stroke-width="2.6"/>
+  </svg>
+  <hr>
+  <h1><span class="a">Palapa Bar -</span> <span class="b">Menú de Coctelería</span></h1>
 </header>
 
 <nav aria-label="Secciones del menú">
@@ -265,256 +236,256 @@
 
   <!-- 01 -->
   <section id="clasicos" aria-labelledby="h-clasicos">
-    <div class="section-head">
-      <h2 id="h-clasicos"><span class="num">01 /</span> Los Clásicos de la Palapa</h2>
-      <span class="section-price">$70</span>
-    </div>
-    <div class="cards">
-      <article class="card">
-        <h3>Margarita</h3>
-        <p class="desc">Tequila, triple sec, jarabe, limón, sal</p>
-        <ul class="opts">
-          <li>Pídela SKINNY (sin jarabe o con Splenda)</li>
-          <li>Pídela MEZCALINA (con Mezcal)</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Clamato</h3>
-        <p class="desc">Vodka, Clamato, limón, Maggi, Valentina</p>
-        <ul class="opts">
-          <li>Pídelo VAMPIRO (con Tequila)</li>
-          <li>Pídelo BLOODY CÉSAR (poco picante)</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Paloma</h3>
-        <p class="desc">Tequila, jugo de toronja, limón, sal, soda</p>
-        <ul class="opts">
-          <li>Pídela SALTY DOG (con Vodka)</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Pepillín</h3>
-        <p class="desc">Ginebra, pepino, jugo de limón, jarabe, Tajín</p>
-        <ul class="opts">
-          <li>Pídelo con Vodka o Tequila</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Piña Colada</h3>
-        <p class="desc">Ron blanco, jugo de piña, crema de coco</p>
-        <ul class="opts">
-          <li>Pídela con Vodka</li>
-          <li>Pídela con leche evaporada (Carnation)</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Bull</h3>
-        <p class="desc">Ron blanco, cerveza clara, limón, jarabe</p>
-        <ul class="opts">
-          <li>Pídelo con Vodka</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Mojito</h3>
-        <p class="desc">Ron blanco, limón, menta, azúcar, soda</p>
-        <ul class="opts">
-          <li>Pídelo SKINNY (con Splenda)</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Tom Collins</h3>
-        <p class="desc">Ginebra, jugo de limón, jarabe, soda</p>
-        <ul class="opts">
-          <li>Pídelo GRAPEFRUIT COLLINS (con toronja)</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Aperol Spritz</h3>
-        <p class="desc">Aperol, prosecco, soda</p>
-        <ul class="opts">
-          <li>Pídelo APEROL BETTY (con jugo de naranja y toronja)</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Hugo Spritz <small style="font-size:.75em">(St. Germain Spritz)</small></h3>
-        <p class="desc">St. Germain, prosecco, soda, menta</p>
-      </article>
-      <article class="card">
-        <h3>Michelada</h3>
-        <p class="desc">Cerveza, limón y sal; la original</p>
-        <ul class="opts">
-          <li>Pídela CUBANA con Salseo</li>
-          <li>Pídela con Clamato</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Long Island Iced Tea</h3>
-        <p class="desc">Vodka, ginebra, ron blanco, tequila, triple sec, jugo de limón, jarabe, Coca-Cola</p>
-      </article>
+    <h2 class="sec" id="h-clasicos"><span class="num">01 /</span> Los Clásicos de la Palapa</h2>
+    <div class="box">
+      <div class="drinks">
+        <div class="drink">
+          <h3>Margarita</h3>
+          <p class="desc">Tequila, triple sec, jarabe, limón, sal</p>
+          <ul class="opts">
+            <li>Pídela SKINNY (sin jarabe o con Splenda)</li>
+            <li>Pídela MEZCALINA (con Mezcal)</li>
+          </ul>
+        </div>
+        <div class="drink">
+          <h3>Clamato</h3>
+          <p class="desc">Vodka, Clamato, limón, Maggi, Valentina</p>
+          <ul class="opts">
+            <li>Pídelo VAMPIRO (con Tequila)</li>
+            <li>Pídelo BLOODY CÉSAR (poco picante)</li>
+          </ul>
+        </div>
+        <div class="drink">
+          <h3>Paloma</h3>
+          <p class="desc">Tequila, jugo de toronja, limón, sal, soda</p>
+          <ul class="opts">
+            <li>Pídela SALTY DOG (con Vodka)</li>
+          </ul>
+        </div>
+        <div class="drink">
+          <h3>Pepillín</h3>
+          <p class="desc">Ginebra, pepino, jugo de limón, jarabe, Tajín</p>
+          <ul class="opts">
+            <li>Pídelo con Vodka o Tequila</li>
+          </ul>
+        </div>
+        <div class="drink">
+          <h3>Piña Colada</h3>
+          <p class="desc">Ron blanco, jugo de piña, crema de coco</p>
+          <ul class="opts">
+            <li>Pídela con Vodka</li>
+            <li>Pídela con leche evaporada (Carnation)</li>
+          </ul>
+        </div>
+        <div class="drink">
+          <h3>Bull</h3>
+          <p class="desc">Ron blanco, cerveza clara, limón, jarabe</p>
+          <ul class="opts">
+            <li>Pídelo con Vodka</li>
+          </ul>
+        </div>
+        <div class="drink">
+          <h3>Mojito</h3>
+          <p class="desc">Ron blanco, limón, menta, azúcar, soda</p>
+          <ul class="opts">
+            <li>Pídelo SKINNY (con Splenda)</li>
+          </ul>
+        </div>
+        <div class="drink">
+          <h3>Tom Collins</h3>
+          <p class="desc">Ginebra, jugo de limón, jarabe, soda</p>
+          <ul class="opts">
+            <li>Pídelo GRAPEFRUIT COLLINS (con toronja)</li>
+          </ul>
+        </div>
+        <div class="drink">
+          <h3>Aperol Spritz</h3>
+          <p class="desc">Aperol, prosecco, soda</p>
+          <ul class="opts">
+            <li>Pídelo APEROL BETTY (con jugo de naranja y toronja)</li>
+          </ul>
+        </div>
+        <div class="drink">
+          <h3>Hugo Spritz (St. Germain Spritz)</h3>
+          <p class="desc">St. Germain, prosecco, soda, menta</p>
+        </div>
+        <div class="drink">
+          <h3>Michelada</h3>
+          <p class="desc">Cerveza, limón y sal; la original</p>
+          <ul class="opts">
+            <li>Pídela CUBANA con Salseo</li>
+            <li>Pídela con Clamato</li>
+          </ul>
+        </div>
+        <div class="drink">
+          <h3>Long Island Iced Tea</h3>
+          <p class="desc">Vodka, ginebra, ron blanco, tequila, triple sec, jugo de limón, jarabe, Coca-Cola</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- 02 -->
   <section id="mixmatch" aria-labelledby="h-mixmatch">
-    <div class="section-head">
-      <h2 id="h-mixmatch"><span class="num">02 /</span> Combina a tu Gusto · Mix &amp; Match</h2>
-      <span class="section-price">$70</span>
-    </div>
-    <div class="columns">
-      <div class="col">
-        <h3>1. Elige tu bebida</h3>
-        <ul>
-          <li>Ron Blanco</li>
-          <li>Tequila</li>
-          <li>Mezcal</li>
-          <li>Vodka</li>
-          <li>Ginebra</li>
-          <li>Whisky Escocés</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h3>2. Elige tu mezclador</h3>
-        <ul>
-          <li>Coca-Cola <small>Regular o Light</small></li>
-          <li>Agua Quina</li>
-          <li>Soda <small>agua mineral</small></li>
-          <li>Yoli</li>
-          <li>Cerveza</li>
-          <li>Prosecco</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h3>3. Personalízalo</h3>
-        <ul>
-          <li>Limón</li>
-          <li>Sal</li>
-          <li>Tajín</li>
-          <li>Salseo</li>
-          <li>Banderilla de tamarindo</li>
-        </ul>
+    <h2 class="sec" id="h-mixmatch"><span class="num">02 /</span> Combina a tu Gusto – Mix &amp; Match</h2>
+    <div class="box">
+      <div class="cols">
+        <div class="col">
+          <h4>1. Elige tu bebida</h4>
+          <ul>
+            <li>Ron Blanco</li>
+            <li>Tequila</li>
+            <li>Mezcal</li>
+            <li>Vodka</li>
+            <li>Ginebra</li>
+            <li>Whisky Escocés</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>2. Elige tu mezclador</h4>
+          <ul>
+            <li>Coca-Cola (Regular o Light)</li>
+            <li>Agua Quina</li>
+            <li>Soda (Agua Mineral)</li>
+            <li>Yoli</li>
+            <li>Cerveza</li>
+            <li>Prosecco</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>3. Personalízalo</h4>
+          <ul>
+            <li>Limón</li>
+            <li>Sal</li>
+            <li>Tajín</li>
+            <li>Salseo</li>
+            <li>Banderilla de Tamarindo</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 03 -->
   <section id="sinalcohol" aria-labelledby="h-sinalcohol">
-    <div class="section-head">
-      <h2 id="h-sinalcohol"><span class="num">03 /</span> Para Niños y Sin Alcohol</h2>
-      <span class="section-price">$50</span>
-    </div>
-    <div class="cards">
-      <article class="card">
-        <h3>Piñada</h3>
-        <p class="desc">Jugo de piña, crema de coco, leche evaporada (Carnation)</p>
-        <ul class="opts">
-          <li>Pídela con Vodka o Ron</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Pantera Rosa</h3>
-        <p class="desc">Jugo de piña, crema de coco, leche evaporada (Carnation), granadina</p>
-        <ul class="opts">
-          <li>Pídela con Vodka o Ron</li>
-        </ul>
-      </article>
-      <article class="card">
-        <h3>Canica</h3>
-        <p class="desc">Yoli, granadina</p>
-      </article>
-      <article class="card">
-        <h3>Suero</h3>
-        <p class="desc">Sal, jugo de limón, soda</p>
-      </article>
-      <article class="card">
-        <h3>Conga</h3>
-        <p class="desc">Jugo de naranja con granadina</p>
-      </article>
-      <article class="card">
-        <h3>Limonada</h3>
-        <p class="desc">Jugo de limón, jarabe y soda o agua natural</p>
-        <ul class="opts">
-          <li>Pídela con Splenda</li>
-        </ul>
-      </article>
+    <h2 class="sec" id="h-sinalcohol"><span class="num">03 /</span> Para Niños y Sin Alcohol</h2>
+    <div class="box">
+      <div class="drinks">
+        <div class="drink">
+          <h3>Piñada</h3>
+          <p class="desc">Jugo de piña, crema de coco, leche evaporada (Carnation)</p>
+          <ul class="opts">
+            <li>Pídela con Vodka o Ron</li>
+          </ul>
+        </div>
+        <div class="drink">
+          <h3>Pantera Rosa</h3>
+          <p class="desc">Jugo de piña, crema de coco, leche evaporada (Carnation), granadina</p>
+          <ul class="opts">
+            <li>Pídela con Vodka o Ron</li>
+          </ul>
+        </div>
+        <div class="drink">
+          <h3>Canica</h3>
+          <p class="desc">Yoli, granadina</p>
+        </div>
+        <div class="drink">
+          <h3>Suero</h3>
+          <p class="desc">Sal, jugo de limón, soda</p>
+        </div>
+        <div class="drink">
+          <h3>Conga</h3>
+          <p class="desc">Jugo de naranja con granadina</p>
+        </div>
+        <div class="drink">
+          <h3>Limonada</h3>
+          <p class="desc">Jugo de limón, jarabe y soda o agua natural</p>
+          <ul class="opts">
+            <li>Pídela con Splenda</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- 04 -->
   <section id="bebidas" aria-labelledby="h-bebidas">
-    <div class="section-head">
-      <h2 id="h-bebidas"><span class="num">04 /</span> Cervezas, Refrescos y Jugos</h2>
-    </div>
-    <div class="columns">
-      <div class="col">
-        <h3>Cervezas en lata · $35</h3>
-        <ul>
-          <li>Modelo</li>
-          <li>Corona</li>
-          <li>Corona Light</li>
-          <li>Michelob Ultra</li>
-          <li>Victoria</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h3>Refrescos en lata · $25</h3>
-        <ul>
-          <li>Coca-Cola</li>
-          <li>Coca Light</li>
-          <li>Yoli</li>
-          <li>Agua Mineral</li>
-          <li>Agua Quina</li>
-        </ul>
-      </div>
-      <div class="col">
-        <h3>Jugos · $25</h3>
-        <ul>
-          <li>Clamato</li>
-          <li>Piña</li>
-          <li>Naranja</li>
-          <li>Toronja</li>
-        </ul>
+    <h2 class="sec" id="h-bebidas"><span class="num">04 /</span> Cervezas, Refrescos y Jugos</h2>
+    <div class="box">
+      <div class="cols">
+        <div class="col">
+          <h4>Cervezas en lata</h4>
+          <ul>
+            <li>Modelo</li>
+            <li>Corona</li>
+            <li>Corona Light</li>
+            <li>Michelob Ultra</li>
+            <li>Victoria</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Refrescos en lata</h4>
+          <ul>
+            <li>Coca-Cola</li>
+            <li>Coca Light</li>
+            <li>Yoli</li>
+            <li>Agua Mineral</li>
+            <li>Agua Quina</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>Jugos</h4>
+          <ul>
+            <li>Clamato</li>
+            <li>Piña</li>
+            <li>Naranja</li>
+            <li>Toronja</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- 05 -->
   <section id="botanas" aria-labelledby="h-botanas">
-    <div class="section-head">
-      <h2 id="h-botanas"><span class="num">05 /</span> Botanas</h2>
-      <span class="section-price">$35</span>
-    </div>
-    <div class="snacks">
-      <div class="snack">Papas <small>50 g</small></div>
-      <div class="snack">Pepino <small>150 g</small></div>
-      <div class="snack">Takis <small>50 g</small></div>
-      <div class="snack">Jícama <small>150 g</small></div>
-      <div class="snack">Cacahuates japoneses <small>50 g</small></div>
-      <div class="snack">Banderilla de tamarindo</div>
+    <h2 class="sec" id="h-botanas"><span class="num">05 /</span> Botanas</h2>
+    <div class="box">
+      <div class="col snacks">
+        <ul>
+          <li>Papas <small>(50 g)</small></li>
+          <li>Takis <small>(50 g)</small></li>
+          <li>Cacahuates japoneses <small>(50 g)</small></li>
+        </ul>
+        <ul>
+          <li>Pepino <small>(150 g)</small></li>
+          <li>Jícama <small>(150 g)</small></li>
+          <li>Banderilla de tamarindo</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- 06 -->
   <section id="precios" aria-labelledby="h-precios">
-    <div class="section-head">
-      <h2 id="h-precios"><span class="num">06 /</span> Precios</h2>
-    </div>
-    <div class="price-table">
-      <div class="price-row"><span>Cocteles y Destilados</span><b>$70</b></div>
-      <div class="price-row"><span>Cocteles Sin Alcohol</span><b>$50</b></div>
-      <div class="price-row"><span>Cervezas</span><b>$35</b></div>
-      <div class="price-row"><span>Refrescos</span><b>$25</b></div>
-      <div class="price-row"><span>Jugos</span><b>$25</b></div>
-      <div class="price-row"><span>Botanas</span><b>$35</b></div>
-      <div class="price-row"><span>Dulces</span><b>$10</b></div>
+    <h2 class="sec" id="h-precios"><span class="num">06 /</span> Precios</h2>
+    <div class="box prices-box">
+      <ul class="prices">
+        <li><span class="label">Cocteles y Destilados</span><span class="amt">$70</span></li>
+        <li><span class="label">Cocteles Sin Alcohol</span><span class="amt">$50</span></li>
+        <li><span class="label">Cervezas</span><span class="amt">$35</span></li>
+        <li><span class="label">Refrescos</span><span class="amt">$25</span></li>
+        <li><span class="label">Jugos</span><span class="amt">$25</span></li>
+        <li><span class="label">Botanas</span><span class="amt">$35</span></li>
+        <li><span class="label">Dulces</span><span class="amt">$10</span></li>
+      </ul>
     </div>
   </section>
 
 </main>
 
 <footer>
-  <p>🌴 Palapa Bar · Precios en pesos mexicanos (MXN)</p>
-  <p>Hecho con <span class="heart">♥</span> bajo la palapa</p>
+  <p>Marina del Sol · Palapa Bar — V9, julio 2026</p>
+  <p>Precios en pesos mexicanos (MXN)</p>
 </footer>
 
 </body>
